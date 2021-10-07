@@ -3,6 +3,12 @@
  
 <body>
 <title>ALL ABOUT JAVA-SCRIPT</title>
+<style>
+    form{
+        background-color: aqua;
+        border: solid red ;
+    }
+</style>
 <h2>Pass phrase by Rahul Konda</h2>
 
 <form>
@@ -38,6 +44,9 @@ function processPhrase (){
         wrong++
         alert("Access Denied")
         //out.innerHTML = "Values were not confirmed"
+        if(wrong > 3){
+            alert("account locked")
+        }
     }
 
     out.innerHTML = "Correct score-" + correct + "         Wrong score-" + wrong
