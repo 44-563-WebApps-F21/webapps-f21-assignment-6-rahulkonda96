@@ -34,6 +34,48 @@ function powers(){
     }
 </script>
 
+<form>
+    <input type="radio" id="1_plus" name="operation" onclick="processRadio()" value="plus">
+    <label for="1_plus">+</label><br>
+    <input type="radio" id="2_minus" name="operation" onclick="processRadio()" value="minus">
+    <label for="2_minus">-</label><br>
+    <input type="radio" id="3_times" name="operation" onclick="processRadio()" value="times">
+    <label for="3_times">*</label><br>
+    <input type="radio" id="4_divide" name="operation" onclick="processRadio()" value="divide">
+    <label for="4_divide">/</label><br>
+</form>
+
+<p id="Arithmetic">This text will be replaced </p>
+
+<script>
+    function processRadio() {
+            num1 = document.getElementById("form1_base").value
+            num2 = document.getElementById("form1_exponent").value
+            plus = document.getElementById("1_plus").checked
+            minus = document.getElementById("2_minus").checked
+            times = document.getElementById("3_times").checked
+            divide = document.getElementById("4_divide").checked
+            out = document.getElementById("Arithmetic")
+            var result = 0
+            if (plus) {
+                result = +num1 + +num2
+                out.innerHTML = "The sum of "+num1+" and "+num2+" is : "+result
+            }
+            else if (minus) {
+                result = num1 - num2
+                out.innerHTML = "The difference of "+num1+" and "+num2+" is : "+result
+            }
+            else if (times) {
+                result = num1 * num2
+                out.innerHTML = "The product of "+num1+" and "+num2+" is : "+result
+            }
+            else if (divide) {
+                result = num1 / num2
+                out.innerHTML = "The divison  of "+num1+" and "+num2+" is : "+result
+            }
+        }
+</script>
+
 
 </body>
 </html> 
